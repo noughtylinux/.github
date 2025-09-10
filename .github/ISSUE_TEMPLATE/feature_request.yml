@@ -1,0 +1,90 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement
+title: "💡 Brief description of the feature"
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide detailed information to help us understand your idea.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Pre-submission checklist
+      options:
+        - label: I have searched existing issues and this feature hasn't been requested previously
+          required: true
+        - label: I have considered if this fits the project's scope and goals
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Use Case
+      description: What problem does this feature solve? What's the motivation?
+      placeholder: |
+        Example: "I'm always frustrated when I have to manually configure X in my setup..."
+        or "It would be great if the you could support Y because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see implemented
+      placeholder: |
+        A clear and detailed description of what you want to happen.
+        Include specific details about how it should work.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - New application
+        - Quality of life improvement
+        - Performance optimization
+        - User interface enhancement
+        - Documentation improvement
+        - Developer tooling
+        - Testing or debugging feature
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Nice to Have
+        - Must Have
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative approaches or workarounds?
+      placeholder: Describe any alternative solutions or features you've considered, or current workarounds you use
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Any examples from other libraries/projects, mockups, or references
+      placeholder: Links to similar features in other project, mockups, screenshots, etc.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that would be helpful
+      placeholder: Implementation ideas, technical considerations, potential challenges, etc.
